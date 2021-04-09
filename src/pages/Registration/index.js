@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Signup from '../../components/Signup';
 
 
 class Registration extends Component {
@@ -11,11 +12,7 @@ class Registration extends Component {
     }
 
     render() {
-        return (
-          <div>
-              <h1> Registration page is under construction </h1>
-          </div>  
-        )
+        return <Signup />
     }
 }
 

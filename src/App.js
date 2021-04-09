@@ -50,18 +50,18 @@ class App extends Component {
       <div className="App">
         <Header currentUser={currentUser}/>
         <div className="main"> 
-          <Switch>
             
+            <Switch>
             <Route exact path="/" component={HomePage} />
-            <Route path="/registration" component={Registration}/>
             
             {currentUser &&(
               <Redirect to="/"  />
             )}
 
-            {!currentUser &&(
-              <Route path="/login" component={Login}/>
-            )}
+            
+            <Route exact path="/login" component={Login}/>
+            <Route exact path="/registration" component={Registration}/>
+            
           </Switch>
         </div>
         <Footer />
